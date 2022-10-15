@@ -1,0 +1,122 @@
+[
+  [
+    {
+      "id": 1,
+      "name": "Pioner Automatic",
+      "location": "./assets/images/home.png",
+      "price": "1200$"
+    },
+    {
+      "id": 2,
+      "name": "Hamilton",
+      "location": "./assets/images/feature1.png",
+      "price": "1000$"
+    },
+    {
+      "id": 3,
+      "name": "Angersoll",
+      "location": "./assets/images/featured2.png",
+      "price": "900$"
+    },
+    {
+      "id": 4,
+      "name": "Mido Automatic",
+      "location": "./assets/images/featured3.png",
+      "price": "950$"
+    },
+    {
+      "id": 5,
+      "name": "Longines Automatic",
+      "location": "./assets/images/new1.png",
+      "price": "1500$"
+    },
+    {
+      "id": 6,
+      "name": "Hamilton Gold",
+      "location": "./assets/images/new2.png",
+      "price": "1200$"
+    },
+    {
+      "id": 7,
+      "name": "Dreyfuss & Co",
+      "location": "./assets/images/new3.png",
+      "price": "1100$"
+    },
+    {
+      "id": 8,
+      "name": "IWC Schaffhausen",
+      "location": "./assets/images/new4.png",
+      "price": "400$"
+    },
+    {
+      "id": 9,
+      "name": "Hamilton RoseGold",
+      "location": "./assets/images/product1.png",
+      "price": "780$"
+    },
+    {
+      "id": 10,
+      "name": "Hamilton Automatic Platinum",
+      "location": "./assets/images/product2.png",
+      "price": "420$"
+    },
+    {
+      "id": 11,
+      "name": "Mido Automatic Gold",
+      "location": "./assets/images/product3.png",
+      "price": "1620$"
+    },
+    {
+      "id": 12,
+      "name": "Fossil Automatic",
+      "location": "./assets/images/product4.png",
+      "price": "1280$"
+    },
+    {
+      "id": 13,
+      "name": "L'Duchen",
+      "location": "./assets/images/story.png",
+      "price": "1700$"
+    },
+    {
+      "id": 14,
+      "name": "OMAX",
+      "location": "./assets/images/new5.png",
+      "price": "130$"
+    }
+  ],
+
+  [
+    {
+      "id": 1,
+      "name": "Dave Laid",
+      "resume": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, possimus incidunt quibusdam vitae in facilis labore, ab quasi quod mollitia odio delectus dolorum porro, voluptatibus perspiciatis dolore rem iste voluptates.",
+      "jobTitle": "Model",
+      "date": "March 27, 2021",
+      "location": "./assets/images/testimonial.png"
+    },
+    {
+      "id": 2,
+      "name": "John Doe",
+      "resume": "They are the best watches that one acquires, also they are always with the latest news and especialy with a very confortable price and especially with the attention you recieve, they are always attentive to your questions.",
+      "jobTitle": "Director of a Company",
+      "date": "March 27, 2021",
+      "location": "./assets/images/testimonial1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Ruby Sanchez",
+      "resume": "They are the best watches that one acquires, also they are always with the latest news and especialy with a very confortable price and especially with the attention you recieve, they are always attentive to your questions.",
+      "date": "April 14, 2021",
+      "jobTitle": "Student",
+      "location": "./assets/images/testimonial2.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Alex Arnold",
+      "resume": "They are the best watches that one acquires, also they are always with the latest news and especialy with a very confortable price and especially with the attention you recieve, they are always attentive to your questions.",
+      "date": "June 7, 2020",
+      "location": "./assets/images/testimonial3.jpg"
+    }
+  ]
+]

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FFB566" >
+  <!-- Icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Fav Icon -->
+  <link rel="icon" sizes="512x512" href="./assets/images/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <!-- Links CSS -->
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <title>Watch-ED</title>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+
+    <nav class="nav">
+
+      <a href="#" class="nav__logo"><i class='bx bxs-watch nav__watch-logo'></i> Rolex</a>
+
+      <div class="nav__container">
+        <ul class="nav__tools">
+          <li class="nav__tools-item"><i class='bx bx-moon bx-nav' id="theme-button"></i></li>
+          <li class="nav__tools-item"><i class='bx bx-cart bx-nav' ></i></li>
+          <li class="nav__tools-item nav__tools-item-3"><i class='bx bx-menu bx-nav'></i></li>
+        </ul>
+      </div>
+
+      
+      <div class="nav__container-resume">
+        <div class="nav__container-cross nav-cross">
+          <i class='bx bx-x'></i>
+        </div>
+
+        <ul class="nav__resume">
+          <li class="nav__resume-item"><a href="#home" class="nav__resume-link">Home</a></li>
+          <li class="nav__resume-item"><a href="#featured" class="nav__resume-link">Featured</a></li>
+          <li class="nav__resume-item"><a href="#products" class="nav__resume-link">Products</a></li>
+          <li class="nav__resume-item"><a href="#new" class="nav__resume-link">New</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__cart">
+
+        <div class="cart__container">
+
+          <div class="nav__container-cross">
+            <i class='bx bx-x'></i>
+          </div>
+
+          <div class="cart__container-title">
+            <h2 class="cart__principal-title">My Cart</h2>
+          </div>
+
+          <div class="cart__content">
+            
+          </div>
+
+          <div class="cart__container-resume">
+            <div class="cart__resume">
+              <span class="cart__items"></span>
+              <span class="cart_price"></span>
+            </div>
+            
+              <span class="cart__buy"></span>
+
+          </div>
+
+        </div>
+
+        <template class="cart__template">
+          <div class="cart__card">
+
+            <div class="cart__container-img">
+              <img class="cart_img">
+            </div>
+
+            <div class="cart__data">
+              <div class="cart__nonmutable">
+                <h1 class="cart__card-title"></h1>
+                <span class="cart__card-price"></span>
+              </div>
+
+              <div class="cart__mutable">
+                <div class="cart__change-data">
+                  <i class='bx bx-minus cart__minus'></i>
+                  <span class="cart__amount"></span>
+                  <i class='bx bx-plus cart__plus' ></i>
+                </div>
+
+
+                <div class="cart__delete-data">
+                  <i class='bx bx-trash-alt cart__trash'></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </template>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+
+    <a href="#" class="back-to-menu">
+      <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
+    <section class="home section" id="home">
+
+      <div class="home__container">
+
+        <div class="home__firstHalf">
+          
+          <div class="home__social">
+            <div class="home__social-container">
+              <ul class="home__social-list">
+                <li class="home__social-item"><a href="https://github.com/sZKiu" class="home__social-link">LinkdIn</a></li>
+                <li class="home__social-item"><a href="https://www.linkedin.com/in/augusto-andres-mendez/?originalSubdomain=ar" class="home__social-link">GitHub</a></li>
+                <li class="home__social-item"><a href="" class="home__social-link">Twitter</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="home__container-img">
+            <img class="home__img">
+          </div>
+        </div>
+        
+        <div class="home__description">
+
+          <h1 class="home__description-title"></h1>
+          <p class="home__description-data"></p>
+          <span class="home__description-price"></span>
+          <div class="home__description-buttons">
+            <a href="#" class="home__description-discover">Discover</a>
+            <button class="home__description-buy button">ADD TO CART</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="featured section"  id="featured">
+      <div class="generic__container-title">
+        <h2 class="title__generic">Featured</h2>
+      </div>
+
+      <div class="featured__general">
+
+        <div class="featured__info 2">
+          <div class="featured__sale">SALE</div>
+          <img class="featured__img">
+          <h3 class="featured__name"></h3>
+          <span class="featured__price"></span>
+            <button class="feature__buy">ADD TO CART</button>
+        </div>
+
+        <div class="featured__info 3">
+          <div class="featured__sale">SALE</div>
+          <img class="featured__img">
+          <h3 class="featured__name"></h3>
+          <span class="featured__price"></span>
+            <button class="feature__buy">ADD TO CART</button>
+        </div>
+
+        <div class="featured__info 4">
+          <div class="featured__sale">SALE</div>
+          <img class="featured__img">
+          <h3 class="featured__name"></h3>
+          <span class="featured__price"></span>
+            <button class="feature__buy">ADD TO CART</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="story section">
+      <div class="generic__container-title">
+        <h2 class="title__generic">Our History</h2>
+      </div>
+
+      <div class="story__total">
+        <div class="story__info">
+          <h2 class="story__title">International Watch of this year</h2>
+          <p class="story__des">The latest and modern watches of this year, is available in various presentations in this store, discover them now.</p>
+          <button class="story__buy button">DISCOVER</button>
+        </div>
+
+        <div class="story__img">
+          <img class="story__picture">
+        </div>
+      </div>
+
+      <a href="#home" class="discover"></a>
+    </section>
+
+    <section class="products section" id="products">
+      <div class="generic__container-title">
+        <h2 class="title__generic">Products</h2>
+      </div>
+
+      <div class="product__container">
+
+        <div class="product__card 9">
+
+          <div class="product__sale"><i class='bx bx-shopping-bag' ></i></div>
+          <img class="product__img">
+          <h3 class="product__name"></h3>
+          <span class="product__price"></span>
+
+        </div>
+        <div class="product__card 10">
+
+          <div class="product__sale"><i class='bx bx-shopping-bag' ></i></div>
+          <img class="product__img">
+          <h3 class="product__name"></h3>
+          <span class="product__price"></span>
+
+        </div>
+        <div class="product__card 11">
+
+          <div class="product__sale"><i class='bx bx-shopping-bag' ></i></div>
+          <img class="product__img">
+          <h3 class="product__name"></h3>
+          <span class="product__price"></span>
+
+        </div>
+        <div class="product__card 12">
+
+          <div class="product__sale"><i class='bx bx-shopping-bag' ></i></div>
+          <img class="product__img">
+          <h3 class="product__name"></h3>
+          <span class="product__price"></span>
+
+        </div>
+
+      </div>
+
+        <div class="click-me-container"><button class="click-me">Click me to see more!</button></div>
+
+        <template class="product__card-template">
+          <div class="product__card">
+            <div class="product__sale"><i class='bx bx-shopping-bag'></i></div>
+            <img class="product__img">
+            <h3 class="product__name"></h3>
+            <span class="product__price"></span>
+          </div>
+        </template>
+        
+    </section>
+
+    <section class="testimonial section">
+      
+      <div class="testimonial__quote">
+        <i class='bx bxs-quote-alt-left'></i>
+      </div>
+
+      <template class="testimonial__template">
+        <div class="testimonial__container">
+          <p class="testimonial__text">
+          </p>
+          <span class="testimonial__date">
+          </span>
+          <div class="testimonial__card">
+            <img class="testimonial__img">
+            <div class="testimonial__data">
+              <h3 class="testimonial__name"></h3>
+              <p class="testimonial__job"></p>
+            </div>
+          </div>
+
+        </div>
+      </template>
+
+      <div class="testimonial__global">
+
+      </div>
+    </section>
+    
+    <section class="new section" id="new">
+      <div class="generic__container-title">
+        <h2 class="title__generic">New Arrivals</h2>
+      </div>
+
+    
+      <div class="swiper new__container-swiper"><div class="swiper-wrapper new__global"></div></div>
+    </section>
+
+    <section class="newsletter section">
+      <div class="newsletter__container">
+        <h3 class="newsletter__title">Subscribe Our Newsletter</h3>
+        <p class="newsletter__info">Don't miss out on your discounts.
+          Subscribe to our email newsletter to get the best offers, discounts, coupons, gifts and much more.
+        </p>
+        <form class="newsletter__form">
+          <input type="email" class="newsletter__email" placeholder="Enter your email" >
+          <input type="submit" class="newsletter__submit" value="SUBSCRIBE">
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+
+    <div class="footer__global">
+      <div class="footer__information footer__container">
+      
+        <h2 class="footer__information-title footer__title">
+          Our Information
+        </h2>
+  
+        <ul class="footer__list">
+          <li class="footer__information-info footer-info">Argentina - Buenos Aires</li>
+          <li class="footer__information-info footer-info">Tacuari 1070</li>
+          <li class="footer__information-info footer-info">+54 9 1158986287</li>
+        </ul>
+  
+      </div>
+  
+      <div class="footer__about footer__container">
+  
+        <h2 class="footer__about-title footer__title">
+          About Us
+        </h2>
+  
+        <ul class="footer__list">
+          <li class="footer__about-info footer-info">Support Center</li>
+          <li class="footer__about-info footer-info">Customer Support</li>
+          <li class="footer__about-info footer-info">About Us</li>
+          <li class="footer__about-info footer-info">Copy Right</li>
+        </ul>
+  
+      </div>
+  
+      <div class="footer__social footer__container">
+  
+        <h2 class="footer__social-title footer__title">
+          Social
+        </h2>
+  
+        <div class="footer__list">
+          <a class="footer__social-info footer-info" href="https://github.com/sZKiu"><i class='bx bxl-github'></i></a>
+          <a class="footer__social-info footer-info" href="https://www.linkedin.com/in/augusto-andres-mendez/?originalSubdomain=ar"><i class='bx bxl-linkedin-square'></i></a>
+        </div>
+  
+      </div>
+  
+      <span class="footer__rights">&#169; sZKiu. All rights reserved</span>
+    </div>
+    
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+</body>
+</html>
