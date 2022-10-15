@@ -190,7 +190,7 @@ if (indexedDB) {
       } catch (err) {
         const $modalErr = d.createElement("div");
         $modalErr.classList.add("modal-err");
-        $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
+        $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
         d.querySelector("header").insertAdjacentElement(
           "beforebegin",
           $modalErr
@@ -843,7 +843,7 @@ if (mql.matches) {
   } catch (e) {
     const $modalErr = d.createElement("div");
     $modalErr.classList.add("modal-err");
-    $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
+    $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
     d.querySelector("header").insertAdjacentElement("beforebegin", $modalErr);
   }
 })();
@@ -876,7 +876,7 @@ if (mql.matches) {
   } catch (e) {
     const $modalErr = d.createElement("div");
     $modalErr.classList.add("modal-err");
-    $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
+    $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
     d.querySelector("header").insertAdjacentElement("beforebegin", $modalErr);
   }
 })();
@@ -913,18 +913,14 @@ d.addEventListener("click", (e) => {
 
   try {
     if (request.ok) {
-      const $modalErr = d.createElement("div");
-      $modalErr.classList.add("modal-err");
-      $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
-      d.querySelector("header").insertAdjacentElement("beforebegin", $modalErr);
-    //   const $homeImg = d.querySelector(".story__picture");
-    //   $homeImg.src = json[0][12].location;
-    //   $homeImg.alt = `Watch ${json[0][12].name}`;
+      const $homeImg = d.querySelector(".story__picture");
+      $homeImg.src = json[0][12].location;
+      $homeImg.alt = `Watch ${json[0][12].name}`;
     }
   } catch (e) {
     const $modalErr = d.createElement("div");
     $modalErr.classList.add("modal-err");
-    $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
+    $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
     d.querySelector("header").insertAdjacentElement("beforebegin", $modalErr);
   }
 })();
@@ -964,7 +960,7 @@ d.querySelector(".story__buy").addEventListener("click", (e) =>
   } catch (e) {
     const $modalErr = d.createElement("div");
     $modalErr.classList.add("modal-err");
-    $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
+    $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
     d.querySelector("header").insertAdjacentElement("beforebegin", $modalErr);
   }
 })();
@@ -1026,7 +1022,7 @@ d.addEventListener("click", (e) => {
       } catch (err) {
         const $modalErr = d.createElement("div");
         $modalErr.classList.add("modal-err");
-        $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
+        $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
         d.querySelector("header").insertAdjacentElement(
           "beforebegin",
           $modalErr
@@ -1112,7 +1108,7 @@ d.addEventListener("click", (e) => {
     } catch (e) {
       const $modalErr = d.createElement("div");
       $modalErr.classList.add("modal-err");
-      $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
+      $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
       d.querySelector("header").insertAdjacentElement("beforebegin", $modalErr);
     }
   }else{
@@ -1170,7 +1166,7 @@ d.addEventListener("click", (e) => {
     } catch (e) {
       const $modalErr = d.createElement("div");
       $modalErr.classList.add("modal-err");
-      $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
+      $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
       d.querySelector("header").insertAdjacentElement("beforebegin", $modalErr);
     }
   }
