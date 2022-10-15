@@ -1110,11 +1110,6 @@ margin-bottom: var(--mb-1);
     width: 70%;
   }
 
-  .feature__buy{
-    font-size: var(--h3-font-size);
-    padding: 1rem 1.4rem;
-  }
-
   .story__title{
     font-size: var(--biggest-font-size);
   }

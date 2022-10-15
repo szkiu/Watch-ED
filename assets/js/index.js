@@ -561,7 +561,7 @@ if (indexedDB) {
 //DarkMode
 const setTheme = () => {
   const localDB = localStorage.getItem("themes");
-  if (!localDB) {
+  if (localDB === null) {
     localStorage.setItem("themes", JSON.stringify({ theme: "light" }));
   } else if (localDB.split('"')[3] === "dark") {
     setTimeout(() => changeColors(), 50);
