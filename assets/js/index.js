@@ -164,7 +164,7 @@ if (indexedDB) {
 
   //Indexed ADDWATCHES
   d.addEventListener("click", (e) => {
-    const theme = localStorage.getItem("themes").split('"')[3];
+    const theme = localStorage.getItem("dmode").split('"')[3];
     //Adding to cart
     const addCart = async (x) => {
       const request = await fetch("./assets/json/watches.json");
@@ -190,7 +190,7 @@ if (indexedDB) {
       } catch (err) {
         const $modalErr = d.createElement("div");
         $modalErr.classList.add("modal-err");
-        $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
+        $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
         d.querySelector("header").insertAdjacentElement(
           "beforebegin",
           $modalErr
@@ -508,7 +508,7 @@ if (indexedDB) {
 
     //ADD QUANTITY
     if (e.target.matches(".cart__plus")) {
-      const theme = localStorage.getItem("themes").split('"')[3];
+      const theme = localStorage.getItem("dmode").split('"')[3];
 
       const id = e.target.closest(".cart__card").dataset.id;
       addAmount(id);
@@ -551,7 +551,7 @@ if (indexedDB) {
       setTimeout(() => {
         clearAllData();
         putAllData();
-        setTimeout(() => getItems(), 10);
+        setTimeout(() => getItems(), 70);
       }, 1000);
     }
   });
@@ -560,9 +560,9 @@ if (indexedDB) {
 
 //DarkMode
 const setTheme = () => {
-  const localDB = localStorage.getItem("themes");
+  const localDB = localStorage.getItem("dmode");
   if (localDB === null) {
-    localStorage.setItem("themes", JSON.stringify({ theme: "light" }));
+    localStorage.setItem("dmode", JSON.stringify({ theme: "light" }));
   } else if (localDB.split('"')[3] === "dark") {
     setTimeout(() => changeColors(), 50);
   }
@@ -572,16 +572,14 @@ addEventListener("load", setTheme);
 
 d.addEventListener("click", (e) => {
   if (e.target.matches("#theme-button")) {
-    const localDB = localStorage.getItem("themes");
+    const localDB = localStorage.getItem("dmode");
     const themeValue = localDB.split('"')[3];
     if (themeValue === "light") {
-      const localDB = localStorage.getItem("themes");
-      localStorage.setItem("themes", JSON.stringify({ theme: "dark" }));
+      localStorage.setItem("dmode", JSON.stringify({ theme: "dark" }));
       changeColors();
     }
     if (themeValue === "dark") {
-      const localDB = localStorage.getItem("themes");
-      localStorage.setItem("themes", JSON.stringify({ theme: "light" }));
+      localStorage.setItem("dmode", JSON.stringify({ theme: "light" }));
       changeColors();
       d.querySelectorAll(".product__card").forEach((el) => {
         el.style.backgroundColor = "#fff";
@@ -719,7 +717,7 @@ d.addEventListener("click", (e) => {
 
 // Scroll Header
 addEventListener("scroll", (e) => {
-  const localDB = localStorage.getItem("themes");
+  const localDB = localStorage.getItem("dmode");
   if (localDB.split('"')[3] === "light") {
     if (scrollY >= 15) {
       d.querySelector(".header").classList.add("background-white");
@@ -845,7 +843,7 @@ if (mql.matches) {
   } catch (e) {
     const $modalErr = d.createElement("div");
     $modalErr.classList.add("modal-err");
-    $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
+    $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
     d.querySelector("header").insertAdjacentElement("beforebegin", $modalErr);
   }
 })();
@@ -878,7 +876,7 @@ if (mql.matches) {
   } catch (e) {
     const $modalErr = d.createElement("div");
     $modalErr.classList.add("modal-err");
-    $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
+    $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
     d.querySelector("header").insertAdjacentElement("beforebegin", $modalErr);
   }
 })();
@@ -915,14 +913,18 @@ d.addEventListener("click", (e) => {
 
   try {
     if (request.ok) {
-      const $homeImg = d.querySelector(".story__picture");
-      $homeImg.src = json[0][12].location;
-      $homeImg.alt = `Watch ${json[0][12].name}`;
+      const $modalErr = d.createElement("div");
+      $modalErr.classList.add("modal-err");
+      $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
+      d.querySelector("header").insertAdjacentElement("beforebegin", $modalErr);
+    //   const $homeImg = d.querySelector(".story__picture");
+    //   $homeImg.src = json[0][12].location;
+    //   $homeImg.alt = `Watch ${json[0][12].name}`;
     }
   } catch (e) {
     const $modalErr = d.createElement("div");
     $modalErr.classList.add("modal-err");
-    $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
+    $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
     d.querySelector("header").insertAdjacentElement("beforebegin", $modalErr);
   }
 })();
@@ -962,7 +964,7 @@ d.querySelector(".story__buy").addEventListener("click", (e) =>
   } catch (e) {
     const $modalErr = d.createElement("div");
     $modalErr.classList.add("modal-err");
-    $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
+    $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
     d.querySelector("header").insertAdjacentElement("beforebegin", $modalErr);
   }
 })();
@@ -972,7 +974,7 @@ d.addEventListener("click", (e) => {
     (async function () {
       const request = await fetch("./assets/json/watches.json");
       const json = await request.json();
-      const theme = localStorage.getItem("themes").split('"')[3];
+      const theme = localStorage.getItem("dmode").split('"')[3];
 
       try {
         const storage = [json[0][1], json[0][2]];
@@ -1024,7 +1026,7 @@ d.addEventListener("click", (e) => {
       } catch (err) {
         const $modalErr = d.createElement("div");
         $modalErr.classList.add("modal-err");
-        $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
+        $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
         d.querySelector("header").insertAdjacentElement(
           "beforebegin",
           $modalErr
@@ -1110,7 +1112,7 @@ d.addEventListener("click", (e) => {
     } catch (e) {
       const $modalErr = d.createElement("div");
       $modalErr.classList.add("modal-err");
-      $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
+      $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
       d.querySelector("header").insertAdjacentElement("beforebegin", $modalErr);
     }
   }else{
@@ -1168,7 +1170,7 @@ d.addEventListener("click", (e) => {
     } catch (e) {
       const $modalErr = d.createElement("div");
       $modalErr.classList.add("modal-err");
-      $modalErr.textContent = `Sorry, we have problems. Reload the page, please`;
+      $modalErr.innerHTML = `<span class="modal-err-span">Sorry, we have problems. Reload the page, please</span`;
       d.querySelector("header").insertAdjacentElement("beforebegin", $modalErr);
     }
   }
@@ -1193,25 +1195,6 @@ d.addEventListener("click", (e) => {
       }
     }
   }
-
-  // if (e.target.matches(".bx-left-arrow-alt")) {
-  //   const $global = e.target
-  //     .closest(".testimonial__buttons")
-  //     .previousElementSibling.querySelectorAll(".testimonial__container");
-  //   for (let el of $global) {
-  //     if (el.classList[1] === "display-block") {
-  //       if (el.previousElementSibling === null) {
-  //         el.closest(".testimonial__global").lastElementChild.classList.add(
-  //           "display-block"
-  //         );
-  //       }
-  //       el.classList.remove("display-block");
-  //       if (el.previousElementSibling !== null)
-  //         el.previousElementSibling.classList.add("display-block");
-  //       break;
-  // }
-  // }
-  // }
 });
 // END Testimonial
 
@@ -1261,30 +1244,29 @@ d.addEventListener("click", (e) => {
       }
     });
     $global.appendChild($fragment);
-
-    //   // const $buttonCont = d.createElement("DIV");
-    //   // $buttonCont.classList.add("testimonial__buttons");
-    //   // const $adjust = d.createElement("DIV");
-    //   // $adjust.classList.add("testimonial__adjust", "new__swiper");
-    //   // const $left = d.createElement("span");
-    //   // $left.classList.add("swiper-button-prev");
-    //   // const $right = d.createElement("span");
-    //   // $right.classList.add("swiper-button-next", "new__swiper");
-    //   // $adjust.appendChild($left);
-    //   // $adjust.appendChild($right);
-    //   // $buttonCont.appendChild($adjust);
-    //   // $fragment.appendChild($buttonCont);
-    //   d.querySelector(".new__container-swiper").appendChild($fragment);
   }
 })();
 
 if (!mqlBig.matches){
   d.addEventListener("click", (e) => {
-    const theme = localStorage.getItem("themes").split('"')[3];
+    const theme = localStorage.getItem("dmode").split('"')[3];
   
     if (theme === "light") {
       const $cards = d.querySelectorAll(".new__container");
       $cards.forEach((card) => {
+        if(e.target === card){
+          const $padre = e.target.closest(".new__container");
+          const $divNone = $padre.querySelector(".new__buy");
+
+          $divNone.classList.toggle("new__buy-visibility");
+          $divNone.classList.toggle("button");
+          $padre.classList.toggle("new__container-active");
+          $padre.querySelector(".new__new").classList.toggle("new__new-active");
+          $padre
+            .querySelector(".new__price")
+            .classList.toggle("new__price-active");
+        }
+
         const $cardChilds = card.querySelectorAll("*");
         $cardChilds.forEach((el) => {
           if (e.target === el && e.target.textContent !== "ADD TO CART") {
@@ -1306,6 +1288,19 @@ if (!mqlBig.matches){
     if (theme === "dark") {
       const $cards = d.querySelectorAll(".new__container");
       $cards.forEach((card) => {
+        if(e.target === card){
+          const $padre = e.target.closest(".new__container");
+          const $divNone = $padre.querySelector(".new__buy");
+
+          $divNone.classList.toggle("new__buy-visibility");
+          $divNone.classList.toggle("button");
+          $padre.classList.toggle("new__container-active");
+          $padre.querySelector(".new__new").classList.toggle("new__new-active");
+          $padre
+            .querySelector(".new__price")
+            .classList.toggle("new__price-active");
+        }
+
         const $cardChilds = card.querySelectorAll("*");
         $cardChilds.forEach((el) => {
           if (e.target === el && e.target.textContent !== "ADD TO CART") {

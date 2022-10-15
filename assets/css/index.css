@@ -137,6 +137,25 @@ main{
   font-size: var(--h2-font-size);
 }
 
+.modal-err{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+  background-color: var(--button-color);
+  z-index: 120;
+  color: #fff;
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  bottom: 30%;
+  right: 30%;
+}
+
+.modal-err-span{
+  font-size: var(--h3-font-size);
+}
+
 /* Header Resume Bar */
 
 @media screen and (max-width: 1024px){
